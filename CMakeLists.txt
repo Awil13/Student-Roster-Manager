@@ -3,4 +3,8 @@ project(C867_PA)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(C867_PA main.cpp)
+add_executable(C867_PA main.cpp
+        roster.cpp
+        student.cpp
+        degree.h
+        student.h)
