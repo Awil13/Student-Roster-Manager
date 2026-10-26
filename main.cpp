@@ -26,6 +26,28 @@ int main() {
             classRoster.parse(row);
         }
 
+    classRoster.printAll();
+    cout << endl;
+
+    classRoster.printInvalidEmails();
+    cout << endl;
+
+    for (const string& row : studentData) {
+        string id = row.substr(0, row.find(','));
+        classRoster.printAverageDaysInCourse(id);
+    }
+    cout << endl;
+
+    classRoster.printByDegreeProgram(SOFTWARE);
+    cout << endl;
+
+    classRoster.remove("A3");
+    classRoster.printAll();
+    cout << endl;
+
+    classRoster.remove("A3");
+
+    classRoster.~Roster();
 
     return 0;
 }

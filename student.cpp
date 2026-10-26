@@ -52,7 +52,7 @@ void Student::setAge(int age) {
 }
 void Student::setNumDays(const int numDays[]) {
     for (int i=0; i<3; i++) {
-        this->numDays = numDays;
+        this->numDays[i] = numDays[i];
     }
 }
 void Student::setDegreeProgram(DegreeProgram degreeProgram) {

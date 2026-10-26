@@ -49,7 +49,7 @@ void Roster::remove(string studentID) {
     for (int i = 0; i<= lastIndex; i++) {
         if (classRosterArray[i]->getStudentID() == studentID) {
             delete classRosterArray[i];
-            for (int j = 0; j <= lastIndex; j++) {
+            for (int j = i; j < lastIndex; j++) {
                 classRosterArray[j] = classRosterArray[j+1];
             }
             classRosterArray[lastIndex] = nullptr;
@@ -57,7 +57,7 @@ void Roster::remove(string studentID) {
             return;
         }
     }
-    cout << "Error: Student with ID" << studentID << " was not found" << endl;
+    cout << "Error: Student with ID " << studentID << " was not found." << endl;
 }
 
 
@@ -76,7 +76,7 @@ void Roster::printAverageDaysInCourse(string studentID) {
             return;
         }
     }
-    cout << "Error: Student with ID" << studentID << " was not found" << endl;
+    cout << "Error: Student with ID " << studentID << " was not found." << endl;
 }
 
 void Roster::printInvalidEmails() {
@@ -86,7 +86,7 @@ void Roster::printInvalidEmails() {
         bool hasPeriod = email.find('.') != string::npos;
         bool hasSpace = email.find(' ') != string::npos;
         if (!hasAt || !hasPeriod || hasSpace) {
-            cout <<email << endl;
+            cout << "Invalid Email: " << email << endl;
         }
     }
 }
