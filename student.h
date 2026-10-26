@@ -1,15 +1,19 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+#include <string>
 #include "degree.h"
+using namespace std;
 
 class Student {
 public:
     Student(string studentID, string firstName, string lastName, string emailAddress, int age, const int numDays[], DegreeProgram degreeProgram);
 
     string getStudentID() const;
-    string getfirstName() const;
+    string getFirstName() const;
     string getLastName() const;
-    string getemailAddress() const;
-    int getage() const;
-    const int* getnumDays() const;
+    string getEmailAddress() const;
+    int getAge() const;
+    const int* getNumDays() const;
     DegreeProgram getDegreeProgram() const;
 
     void setStudentID(string studentID);
@@ -17,7 +21,7 @@ public:
     void setLastName(string lastName);
     void setEmailAddress(string emailAddress);
     void setAge(int age);
-    void setNumDays(const int* numDays);
+    void setNumDays(const int numDays[]);
     void setDegreeProgram(DegreeProgram degreeProgram);
 
     void print() const;
@@ -28,6 +32,8 @@ private:
     string lastName;
     string emailAddress;
     int age;
-    const int numDays[];
+    int numDays[3];
     DegreeProgram degreeProgram;
 };
+
+#endif

@@ -50,22 +50,24 @@ void Student::setEmailAddress(string emailAddress) {
 void Student::setAge(int age) {
     this->age = age;
 }
-void Student::setNumDays(const int numDays) {
-    this->numDays = numDays;
+void Student::setNumDays(const int numDays[]) {
+    for (int i=0; i<3; i++) {
+        this->numDays = numDays;
+    }
 }
 void Student::setDegreeProgram(DegreeProgram degreeProgram) {
     this->degreeProgram = degreeProgram;
 }
 
 void Student::print() const {
+    static const string degreeNames[] = {"Security", "Network","Software"};
     cout << studentID << "\t"
     << "First Name: " << firstName << "\t"
     << "Last Name: " << lastName << "\t"
-    << "Email Address: " << emailAddress << "\t"
+    << "Email: " << emailAddress << "\t"
     << "Age: " << age << "\t"
-    << "Number of Days: " << numDays << "\t"
-    << "Degree Program: " << degreeProgram.getDegreeProgram() << "\t"
-    << endl;
+    << "daysInCourse: {" << numDays[0] << ", " <<numDays[1] << ", " << numDays[2] << "} "
+    << "Degree Program: " <<  degreeNames[degreeProgram] << endl;
 }
 
 

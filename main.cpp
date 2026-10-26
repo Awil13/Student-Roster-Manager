@@ -18,8 +18,13 @@ int main() {
 
     "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 
-    "A5,[firstname],[lastname],[emailaddress],[age],[numberofdaystocomplete3courses], SOFTWARE"};
+    "A5,Ashlee,Gonzales,agonz656@wgu.edu,29,30,60,33, SOFTWARE"
+    };
 
+    Roster classRoster;
+        for (const string& row : studentData) {
+            classRoster.parse(row);
+        }
 
 
     return 0;
