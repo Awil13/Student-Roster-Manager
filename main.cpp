@@ -4,9 +4,6 @@
 using namespace std;
 
 int main() {
-    cout << "C867 Scripting and Programming -Applications, C++" << endl;
-    cout << "Ashlee Gonzales" << endl;
-    cout << "Student ID: 013151855" << endl;
     
     const string studentData[] =
 
@@ -18,7 +15,7 @@ int main() {
 
     "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 
-    "A5,Ashlee,Gonzales,agonz656@wgu.edu,29,30,60,33, SOFTWARE"
+    "A5,Ashlee,Gonzales,abcdef@gmail.com,29,30,60,33, SOFTWARE"
     };
 
     Roster classRoster;
